@@ -17,7 +17,7 @@
     <h1>Excpetional</h1>
     <h2>Reality Group</h2>
     
-    <img src="images/intro-pic.jpg" alt="A beautiful living room." title="Welcome to Exceptional Reality">>
+    <img src="images/intro-pic.jpg" alt="A beautiful living room." <img src="image/intro-pic.jpg" alt="" />title="Welcome to Exceptional Reality">
     
     
     <!-- foldername/ = go inside folder
