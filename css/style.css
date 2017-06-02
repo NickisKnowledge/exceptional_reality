@@ -34,7 +34,6 @@ figcaption{
 
 /*ID selector (applied to 1 unique elements per page)*/
 #logo{/*select elements with id="logo"*/
-  background-color: aqua;
 }
 
 /*Descendant selector (selects descendant in another parent element)*/
@@ -60,4 +59,103 @@ figcaption{
 
 #details a:active {
   color: red;
+}
+
+/*//////MEDIA//////*/
+/*allows audio, vid, img to be fluid within parent confine*/
+img, video, audio {
+  max-width: 100%;
+}
+
+/*//////LAYOUT//////*/
+
+/*border-box includes padding and border into width*/
+* {
+/*'-' help with browser compatibility 4 older versions of safari and firefox*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width:  960px;
+  /* (top/bottom) (L/R)*/
+  margin: 0 auto;
+}
+
+/*3 col's*/
+.col-1 {
+  float: left;
+/*split screen evenly among 3 col w/2% margin:(100-4)/3 */
+/*-4 b/c 2 diff margins btw col 1&2, 2&3*/
+  width: 32%;
+  background-color: #ccc;
+}
+
+.col-2 {
+  float: left;
+/*takes up space of 2 col's 64, but +2% of margin, dnt need 4%*/
+  width: 66%;
+  background-color: #ccc;
+}
+
+.col-3 {
+/*3 colums*/
+  background-color: #ccc;
+}
+
+/*keeps parent wrapper around floating kids*/
+.clearfix:after{
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+
+/*attr-sel, anything with '.col-' give it a margin of 2%*/
+[class*="col-"] {
+  margin: 2%;
+}
+
+/*overrides attr-sel margin setting for 1st col*/
+.first {
+  margin-left: 0;
+}
+
+header {
+/*text won't move when scroll*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+
+/*gives space for text and adds sec space*/
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/*//////SOCIAL//////*/
+
+#social {
+/*text won't move when scroll*/
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 40px;
+/*makes text always be on top of everything*/
+  z-index: 1;
+}
+
+#social a {
+/*ensure vertical stack*/
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: yellow;
 }
